@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Main</title>
+</head>
+<body style="background-color: #009D17">
+    <div class="container">
+        <h3>Вас приветствует симулятор кота<p>для начало введите имя кота</p></h3>
+       <form action="inform_cat" method="post">
+            {% csrf_token %}
+            <input type="text" name="name" id="name" class="text" size="40">
+            <p><input type="submit" value="Отправить" class="button"></p>
+        </form>
+    </div>
+</body>
+</html>
